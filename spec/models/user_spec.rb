@@ -95,28 +95,28 @@ RSpec.describe User, type: :model do
   
   describe '.authenticate_with_credentials' do
     
-    xit "should login a user if they have valid credentials" do
-      valid_user = User.authenticate_with_credentials("d@l.com", "12345")
+    it "should login a user if they have valid credentials" do
+      valid_user = User.authenticate_with_credentials("frodo@middle-earth.com", "myprecious")
       expect(valid_user).to eq(@user)
     end
 
-    xit "should not login user if email is incorrect" do
-      valid_user = User.authenticate_with_credentials("da@l.com", "12345")
+    it "should not login user if email is incorrect" do
+      valid_user = User.authenticate_with_credentials("ffrodo@middle-earth.com", "myprecious")
+      expect(valid_user).to eq(nil)
+    end
+
+    it "should not login user if password is incorrect" do
+      valid_user = User.authenticate_with_credentials("frodo@middle-earth.com", "mypreciouss")
       expect(valid_user).to_not eq(@user)
     end
 
-    xit "should not login user if password is incorrect" do
-      valid_user = User.authenticate_with_credentials("d@l.com", "123456")
-      expect(valid_user).to_not eq(@user)
-    end
-
-    xit "should login user if letters are capitalized" do
-      valid_user = User.authenticate_with_credentials("D@L.com", "12345")
+    it "should login user if email letters are capitalized" do
+      valid_user = User.authenticate_with_credentials("FROdo@middle-earth.com", "myprecious")
       expect(valid_user).to eq(@user)
     end
 
-    xit "should login user there is whitspace in the email" do
-      valid_user = User.authenticate_with_credentials("    d@l.com    ", "12345")
+    it "should login user there is whitspace in the email" do
+      valid_user = User.authenticate_with_credentials("  frodo@middle-earth.com  ", "myprecious")
       expect(valid_user).to eq(@user)
     end    
 
