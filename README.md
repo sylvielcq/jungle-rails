@@ -4,11 +4,19 @@ A fully functional mini e-commerce application built with Ruby and Rails 6.1.
 
 This is my sixth project at Lighthouse Labs, after [Lotide](https://github.com/sylvielcq/lotide), [TinyApp](https://github.com/sylvielcq/tinyapp), [Tweeter](https://github.com/sylvielcq/tweeter-app), midtem project [Flavour Labs](https://github.com/sylvielcq/Flavour-Labs) and [Interview Scheduler](https://github.com/sylvielcq/scheduler).
 
-# Features
+## Features
 
 * Users can browse products, add items to cart, and process their purchase with a credit/debit card.
 * Users can sign up and log in.
 * Admins can log in, browse their Admin dashboard, add new products, add new categories.
+
+## Final Product
+
+### Browse products and add to cart
+![add-to-cart](https://github.com/sylvielcq/jungle-rails/blob/master/docs/jungle-add-to-cart.gif?raw=true)
+
+### Admin - Products
+![admin-products](https://github.com/sylvielcq/jungle-rails/blob/master/docs/jungle-admin.gif?raw=true)
 
 ## Setup
 
