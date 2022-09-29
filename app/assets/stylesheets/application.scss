@@ -111,3 +111,17 @@ form.button_to {
 .text-danger {
   color: #f38792 !important;
 }
+
+.about {
+  display: flex;
+  align-items: center;
+
+  .content {
+    text-align: center;
+  }
+
+  img {
+    margin-left: 40px;
+    margin-top: 70px;
+  }
+}
